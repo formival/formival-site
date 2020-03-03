@@ -1,3 +1,3 @@
-## Formly Documentation
+## Formival Documentation
 
-Website and Docs for the Formly project.
+Website and Docs for the Formival project.
