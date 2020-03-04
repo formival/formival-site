@@ -32,4 +32,3 @@ the form, binding them to the appropriate parts
 of the form model. Provide validations for the form
 model and the appropriate validation results will
 be passed to the appropriate parts of the form.
-
