@@ -6,7 +6,8 @@ description: "Formival is a dynamic form library for Vue"
 permalink: /
 ---
 
-# Formival
+# <img src="https://formival.github.io/formival.png" alt="logo" width="100"/> Formival
+
 
 As web app developers, we spend a lot of our time
 building forms. What if building forms could be 
