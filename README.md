@@ -1,5 +1,8 @@
 # Formival Documentation
 
+This repo contains the source for the website:
+https://formival.github.io/
+
 As web app developers, we spend a lot of our time
 building forms. What if building forms could be 
 productive and fun? 
