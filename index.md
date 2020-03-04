@@ -198,8 +198,8 @@ const wrappers = [
 ];
 
 const validationMessages = {
-  required: "{{field.templateOptions.label}} is required",
-  email: "{{value}} is not a valid email address"
+  required: "\{\{field.templateOptions.label\}\} is required",
+  email: "\{\{value\}\} is not a valid email address"
 };
 
 const formival = new Formival({
