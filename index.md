@@ -98,7 +98,12 @@ embed a form anywhere:
 </form>
 ```
 
-The `:fields` binding defines the structure of the form:
+The `:fields` binding defines the structure of the form. 
+Each field has a unique `key` that defines which bit of the 
+model should be bound to this field. The `type` defines
+which input component is used. And `templateOptions` defines
+any extra options that are passed along to the input and wrapper
+components:
 
 ```js
       fields: [
@@ -160,3 +165,91 @@ import {required, minLength, email} from "vuelidate/lib/validators";
     }
 ...
 ```
+
+## Configuration
+
+Formival has no opinions about what your form markup should look
+like. You need to provide your own components for the input form
+controls. Formival will take care of binding them to the appropriate
+parts of the model.
+
+Define `types` for input field types. You can use `wrappers` which
+are wrapped around the input fields to provide labels and 
+validation error messages etc. The use of wrappers means that you can
+keep it DRY and not duplicate the same elements in each of the form
+controls. Validation messages use Lodash template strings and have 
+access to the current `value` of the errored field, the `field`
+config, and the `key` of the validator that failed.
+
+```js
+const types = [
+  {
+    name: 'input',
+    component: SimpleInput,
+    wrappers: ['field-wrapper']
+  }
+];
+
+const wrappers = [
+  {
+    name: 'field-wrapper',
+    component: FieldWrapper
+  }
+];
+
+const validationMessages = {
+  required: "{{field.templateOptions.label}} is required",
+  email: "{{value}} is not a valid email address"
+};
+
+const formival = new Formival({
+  types,
+  wrappers,
+  validationMessages
+});
+```
+
+## A Simple Input
+
+```html
+<template>
+    <input :value="value" :id="id" :type="inputType"
+           @change="$emit('touched')"
+           @focus="$emit('reset')"
+           @input="$emit('input', $event.target.value)">
+</template>
+
+<script>
+  export default {
+    name: "SimpleInput",
+    props: ['value', 'field', 'id'],
+    computed: {
+      inputType() {
+        return this.field.templateOptions.type || 'text';
+      }
+    }
+  };
+</script>
+```
+
+## A Simple Wrapper
+
+```html
+<template>
+    <div>
+        <label :for="id">{{ field.templateOptions.label }}</label>
+        <slot></slot>
+        <p v-if="hasError" class="error">{{ errorMessage }}</p>
+    </div>
+</template>
+
+<script>
+  export default {
+    name: "FieldWrapper",
+    props: ['field', 'id', 'hasError', 'errorMessage']
+  };
+</script>
+```
+
+
+
