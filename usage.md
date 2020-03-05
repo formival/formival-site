@@ -157,8 +157,8 @@ const wrappers = [
 ];
 
 const validationMessages = {
-  required: "\{\{field.templateOptions.label\}\} is required",
-  email: "\{\{value\}\} is not a valid email address"
+  required: "{% raw %}{{field.templateOptions.label}}{% endraw %} is required",
+  email: "{% raw %}{{value}}{% endraw %} is not a valid email address"
 };
 
 const formival = new Formival({

@@ -44,8 +44,8 @@ by passing `validationMessages` object to the constructor:
 
 ```js
 const validationMessages = {
-  required: "\{{field.templateOptions.label\}} is required",
-  email: "\{{value\}} is not a valid email address"
+  required: "{% raw %}{{field.templateOptions.label}}{% endraw %} is required",
+  email: "{% raw %}{{value}}{% endraw %} is not a valid email address"
 };
 
 const formival = new Formival({
@@ -61,7 +61,7 @@ new Vue({
 ```
 
 Validation messages are defined as Lodash template strings using
-the `{{` and `}}` as delimiters. The `field` configuration and
+the {% raw %}`{{` and `}}`{% endraw %} as delimiters. The `field` configuration and
 the current `value` are available to use in message templates.
 
 ## Validation Rules Configuration
