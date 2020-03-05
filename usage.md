@@ -170,6 +170,8 @@ const formival = new Formival({
 
 ## A Simple Input
 
+See [input types](/input-types) for more details.
+
 ```html
 <template>
     <input :value="value" :id="id" :type="inputType"
@@ -193,6 +195,8 @@ const formival = new Formival({
 
 ## A Simple Wrapper
 
+See [wrappers](/wrappers) for more details.
+
 ```html
 <template>
     <div>
@@ -209,6 +213,3 @@ const formival = new Formival({
   };
 </script>
 ```
-
-
-
