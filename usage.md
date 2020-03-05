@@ -3,7 +3,7 @@ layout: default
 title: Usage
 nav_order: 2
 description: "How to get started using Formival for Vue"
-permalink: /
+permalink: /usage
 ---
 
 # Usage
