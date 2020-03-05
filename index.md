@@ -6,13 +6,15 @@ description: "Formival is a dynamic form library for Vue"
 permalink: /
 ---
 
-# <img src="https://formival.github.io/formival.png" alt="logo" width="100"/> Formival
-
+# Dynamic Forms for Vue.js
+{: .fs-9 }
 
 As web app developers, we spend a lot of our time
 building forms. What if building forms could be 
-productive and fun? 
+productive and fun?
+{: .fs-6 .fw-300 }
 
+<img src="/vue-formival-vuelidate.png" alt="logos" />
 
 [![npm](https://badgen.net/npm/v/formival)](https://www.npmjs.com/package/formival) 
 [![size](https://badgen.net/bundlephobia/minzip/formival)](https://bundlephobia.com/result?p=formival)
