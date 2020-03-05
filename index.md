@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: About Formival
 nav_order: 1
 description: "Formival is a dynamic form library for Vue"
 permalink: /

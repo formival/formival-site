@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conditional Fields
-nav_order: 6
+nav_order: 7
 description: "How to get started using Formival for Vue"
 permalink: /conditional-fields
 ---

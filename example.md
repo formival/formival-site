@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Examples
-nav_order: 5
+nav_order: 6
 description: "Formival is a dynamic form library for Vue"
 permalink: /example
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Wrappers
 nav_order: 4
 description: "Formival is a dynamic form library for Vue"
 permalink: /wrappers
