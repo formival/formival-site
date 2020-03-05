@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Conditional Fields
-nav_order: 3
+nav_order: 4
 description: "How to get started using Formival for Vue"
 permalink: /conditional-fields
 ---
@@ -9,7 +9,7 @@ permalink: /conditional-fields
 # Conditional Fields
 
 Use Vue's computed properties to enable conditional 
-fields. 
+fields within your forms.
 
 In this example, see how the `fields` that were original defined
 in options are now defined as `fields()` within the computed
