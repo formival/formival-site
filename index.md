@@ -33,8 +33,9 @@ We make use of the awesome Vuelidate library, rather than re-inventing a new val
 You provide a config object that defines your form, and 
 Formival will take care of the rest!
 
-Form inputs are fully customisable. Bring your own 
-input components, and Formival will use them to build
+Formival has no opinions about how your forms should look.
+Form inputs are fully customisable. **Bring your own 
+input components**, and Formival will use them to build
 the form, binding them to the appropriate parts
 of the form model. Provide validations for the form
 model and the appropriate validation results will
