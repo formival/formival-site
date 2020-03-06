@@ -202,7 +202,7 @@ See [wrappers](/wrappers) for more details.
     <div>
         <label :for="id">{{ field.templateOptions.label }}</label>
         <slot></slot>
-        <p v-if="hasError" class="error">{{ errorMessage }}</p>
+        <p v-if="hasError" class="error">{% raw %}{{ errorMessage }}{% endraw %}</p>
     </div>
 </template>
 
